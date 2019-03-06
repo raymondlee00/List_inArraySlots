@@ -1,5 +1,6 @@
 # **List_inArraySlots**
 ## **Contributors**: Jeff Li, Raymond Lee
+#### **Class info**
 ###### **Fields**:
 - length
 ###### **Constructor(s)**:
