@@ -10,5 +10,8 @@
 - swap elements
 - insert element in position n
 - remove element in position n
+- concatenate two lists
+- duplicate a list
+- count number of times a given value appears in the list
 ##### **Remarks on the UserOfList class**:
 - index starts at 0
