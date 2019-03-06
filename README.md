@@ -11,3 +11,4 @@
 - insert element in position n
 - remove element in position n
 ##### **Remarks on the UserOfList class**:
+- index starts at 0
