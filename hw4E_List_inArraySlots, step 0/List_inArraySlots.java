@@ -29,10 +29,10 @@ public class List_inArraySlots {
       */
 	public String toString() {
 		String s = "";
-		for (int index = 0; index < length; index++) {
+		for (int index = 0; index < length - 1; index++) {
 			s += intArr[index] + ", ";
 		}
-//		s += intArr[length - 1];
+		if (length > 0) s += intArr[length - 1];
 		return "[" + s + "]";
 	}
 
