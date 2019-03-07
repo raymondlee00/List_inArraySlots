@@ -6,7 +6,7 @@
 public class List_inArraySlots {
 
     private int[] intArr;
-    private int length = 2;
+    private int length = 0;
 
     /**
       Construct an empty list with a small initial capacity.
@@ -20,27 +20,21 @@ public class List_inArraySlots {
       @return the number of elements in this list
      */
     public int size() {
-      return this.length;
+      return length;
     }
-
 
      /**
        @return a string representation of this list,
        in [a,b,c,] format
       */
-    public String toString() {
-      String str = "";
-      int i = 0;
-      while (i < this.length) {
-        str += this.intArr[i];
-        if (i != this.length - 1) {
-        	str += ", ";
-        }
-        i++;
-      }
-      return "[" + str + "]";
-    }
-
+	public String toString() {
+		String s = "";
+		for (int index = 0; index < length; index++) {
+			s += intArr[index] + ", ";
+		}
+//		s += intArr[length - 1];
+		return "[" + s + "]";
+	}
 
     /**
       Appends @value to the end of this list.
@@ -48,15 +42,12 @@ public class List_inArraySlots {
       @return true, in keeping with conventions yet to be discussed
      */
      public boolean add( int value) {
-      this.expand();
-      int i = 0;
-      while (i < this.length - 1) {
-        if (this.intArr[i] == 0) {
-          this.intArr[i] = value;
-        }
-        i++;
-      }
-      return true;
+		 if(length >= intArr.length) {
+			 expand();
+		 }
+		 intArr[length] = value;
+		 length += 1;
+		 return true;
      }
 
 
@@ -73,12 +64,9 @@ public class List_inArraySlots {
               So test using the println(), then comment it out.
               */
         int[] dummyArr = new int[this.length * 2];
-        int i = 0;
-        while (i < this.length) {
-          dummyArr[i] = this.intArr[i];
-          i++;
-        }
-        this.intArr = dummyArr;
-        this.length *= 2;
+		for(int index = 0; index < length; index++) {
+			dummyArr[index] = intArr[index];
+		}
+        intArr = dummyArr;
      }
 }

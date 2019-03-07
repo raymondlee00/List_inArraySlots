@@ -21,9 +21,7 @@ public class UserOfList {
 
         // Add enough elements that expansion is expected
         for( ; i < 15; i++ ) {
-
             if( i == 10) System.out.println( "expansion expected");
-
             list.add( -i);
             System.out.println( "number of elements: " + list.size() );
         }
