@@ -22,7 +22,10 @@ public class List_inArraySlots {
     public int size() {
       return length;
     }
-
+	
+	public int getCapacity() {
+		return intArr.length;
+	}
      /**
        @return a string representation of this list,
        in [a,b,c,] format

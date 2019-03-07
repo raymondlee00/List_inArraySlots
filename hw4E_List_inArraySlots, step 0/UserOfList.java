@@ -33,5 +33,8 @@ public class UserOfList {
             list.add( -i);
         System.out.println("after second expansion: " + list.size() + " elements:");
         System.out.println( list);
+		
+		//Check capacity
+		System.out.println("Capacity: " + list.getCapacity());
     }
 }
